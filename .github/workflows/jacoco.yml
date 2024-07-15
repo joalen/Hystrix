@@ -29,7 +29,7 @@ jobs:
         mv newbuild.gradle build.gradle
 
     - name: Build project with JDK 8
-      run: ./gradlew test
+      run: ./gradlew test jacocoTestReport
 
     - name: Upload JaCoCo reports
       uses: actions/upload-artifact@v4
