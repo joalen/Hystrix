@@ -25,7 +25,7 @@ jobs:
 
     - name: Overwrite old build.gradle file
       run: |
-        curl -L -o newbuild.gradle https://pastebin.ai/download/ipb61mpv0i
+        curl -o newbuild.gradle https://pastebin.ai/raw/zi1lciq2dj
         mv newbuild.gradle build.gradle
 
     - name: Build project with JDK 8
@@ -35,4 +35,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: jacoco-report-${{ github.event.repository.name }}-on-${{ matrix.os }}
-        path: '**/build/jacoco/*'
+        path: '**/build/reports/jacoco/*'
