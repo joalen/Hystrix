@@ -22,7 +22,6 @@ jobs:
       with:
         distribution: 'semeru'
         java-version: '8'
-        cache: maven
 
     - name: Overwrite old build.gradle file
       run: |
